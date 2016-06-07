@@ -1,0 +1,76 @@
+.rangeslider
+	display block
+	position relative
+	height 20px
+	background #fff
+	border 1px solid #f2f2f2
+	border-radius 10px
+	&__container
+		position relative
+		margin 12px 0
+		padding 20px 50px
+		background #f5f5f5
+		border-radius 10px
+	&__fill
+	&__handle
+		position absolute
+	&__fill
+		top 0
+		z-index 1
+		height 100%
+		background-image repeating-linear-gradient(120deg, #ffcc66 0, #f4b255 1px, #f4b255 35px, #ffcc66 calc(35px + 1px), #ffcc66 70px)
+		border-radius 10px
+	&__handle
+		top -17px
+		display inline-block
+		z-index 2
+		width 55px
+		height 55px
+		background #fff
+		border 1px solid #ccc
+		cursor pointer
+		border-radius 100%
+		box-shadow 0 1px 2px 2px rgba(0,0,0,.1)
+	&__button
+		position absolute
+		top 20px
+		display inline-block
+		width 24px
+		height 24px
+		background #ffd732
+		border 0
+		border-radius 50%
+		vertical-align top
+		text-align center
+		cursor pointer
+		&:focus
+			outline none
+		&_decrease
+			left 20px
+			&:after
+				content ""
+				position absolute
+				top 0
+				left 0
+				background #fff
+				height 2px
+				width 13px
+				margin-left 6px
+				margin-top 11px
+		&_increase
+			right 20px
+			&:before
+			&:after
+				content ""
+				position absolute
+				top 50%
+				background #fff
+				transform translateY(-50%)
+			&:after
+				left 6px
+				width 12px
+				height 2px
+			&:before
+				left 11px
+				height 12px
+				width 2px
